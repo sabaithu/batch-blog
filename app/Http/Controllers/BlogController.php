@@ -1,5 +1,7 @@
 <?php
 
+use App\Blog;
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -13,7 +15,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+       //$blogs = Blog::all()
+       //dd($blogs);
+       return view('blog.index');
     }
 
     /**
@@ -23,7 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -46,6 +50,7 @@ class BlogController extends Controller
     public function show($id)
     {
         //
+        return view('blog.show');
     }
 
     /**

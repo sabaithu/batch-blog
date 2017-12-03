@@ -2,6 +2,6 @@
 
  @section('content')
 
- <h1>Create Blog List</h1>
+ <h1>Show Blog List</h1>
  <hr>
  @stop
