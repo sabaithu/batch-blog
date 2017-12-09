@@ -1,9 +1,8 @@
 <?php
 
-use App\Blog;
-
 namespace App\Http\Controllers;
 
+use App\Blog;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -15,9 +14,22 @@ class BlogController extends Controller
      */
     public function index()
     {
-       //$blogs = Blog::all()
-       //dd($blogs);
-       return view('blog.index');
+       $blogs = Blog::all();
+       //dd($blog);
+       //return view('blog.index');
+       return view('blog.index', compact('blogs'));
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //return view('blog.show');
+        $blog = Blog::find($id);
+        return view('blog.show', compact('blog'));
     }
 
     /**
@@ -41,18 +53,7 @@ class BlogController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-        return view('blog.show');
-    }
-
+    
     /**
      * Show the form for editing the specified resource.
      *

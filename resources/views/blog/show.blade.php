@@ -2,6 +2,9 @@
 
  @section('content')
 
- <h1>Show Blog List</h1>
+ 
+<h1>{{ $blog->title}}</h1>
+<p>{{ $blog->description }}</p>
+
  <hr>
  @stop
