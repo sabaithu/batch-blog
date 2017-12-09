@@ -15,7 +15,7 @@
          </div>
          <div class="nav navbar-nav navbar-right">
             <li><a href="/">Home </a></li>
-             <li><a href="/">Blog </a></li>
+             <li><a href="/blog/">Blog </a></li>
          </div>
     </div>
 </nav>
